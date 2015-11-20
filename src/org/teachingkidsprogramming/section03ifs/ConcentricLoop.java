@@ -1,0 +1,27 @@
+package org.teachingkidsprogramming.section03ifs;
+
+import org.teachingextensions.logo.Tortoise;
+
+public class ConcentricLoop
+{
+  public static void main(String[] args)
+  {
+    Tortoise.setX(150);
+    Tortoise.setY(200);
+    Tortoise.setSpeed(10);
+    for (int i = 0; i < 360; i++)
+    {
+      Tortoise.move(3);
+      Tortoise.turn(1);
+    }
+    for (int j = 0; j < 360; j++)
+    {
+      if (j % 20 == 0)
+      {
+        Tortoise.move(1);
+        Tortoise.turn(1);
+        Tortoise.setPenWidth(1 / 100);
+      }
+    }
+  }
+}
